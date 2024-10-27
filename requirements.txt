@@ -1,0 +1,13 @@
+black
+pytest
+pytest-cov
+pylint
+
+numpy
+matplotlib
+
+pandas
+seaborn
+matplotlib
+plotly
+IPython
