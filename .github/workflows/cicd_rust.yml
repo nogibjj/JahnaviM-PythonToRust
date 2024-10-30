@@ -1,0 +1,37 @@
+name: CICD Rust
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    
+    - name: install rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+    
+    - name: install packages
+      run: make install
+      working-directory: analyze
+
+    - name: lint
+      run: make lint
+      working-directory: analyze
+
+    - name: test
+      run: make test
+      working-directory: analyze
+
+    - name: format
+      run: make format
+      working-directory: analyze

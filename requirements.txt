@@ -6,8 +6,6 @@ pylint
 numpy
 matplotlib
 
-pandas
-seaborn
-matplotlib
-plotly
-IPython
+polars
+datetime
+resource
