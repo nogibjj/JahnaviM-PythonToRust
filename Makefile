@@ -1,14 +1,42 @@
-install:
-	pip install --upgrade pip && pip install -r requirements.txt
+rust-version:
+	@echo "Rust command-line utility versions:"
+	rustc --version 			#rust compiler
+	cargo --version 			#rust package manager
+	rustfmt --version			#rust code formatter
+	rustup --version			#rust toolchain manager
+	clippy-driver --version		#rust linter
 
 format:
-	black *.py
+	cargo fmt --quiet
+
+install:
+
 
 lint:
-	pylint --ignore-patterns=test_.*?py *.py
+	cargo clippy --quiet
 
 test:
-	python -m pytest -cov=analyze/src test_*.py
+	cargo test --quiet
 
-all:
-	install format lint test
+run:
+	cargo run
+
+release:
+	cargo build --release
+
+all: format lint test run
+
+python_install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+
+python_test:
+	python -m pytest -vv --cov=analyze/src test_*.py
+
+python_format:	
+	black *.py 
+
+python_lint:
+	ruff check *.py mylib/*.py
+
+python_refactor: format lint
