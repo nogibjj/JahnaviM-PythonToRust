@@ -10,7 +10,7 @@ format:
 	cargo fmt --quiet
 
 install:
-
+	python_install
 
 lint:
 	cargo clippy --quiet
