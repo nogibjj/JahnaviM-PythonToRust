@@ -1,0 +1,8 @@
+[package]
+name = "analyze"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = "0.25.1"
+sysinfo = "0.32.0"
