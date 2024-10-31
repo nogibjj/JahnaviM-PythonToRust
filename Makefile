@@ -29,7 +29,7 @@ py_install:
 		pip install -r requirements.txt
 
 py_test:
-	python -m pytest -vv --cov=src src/test_*.py
+	python -m pytest -vv --cov=src tests/test_*.py
 
 py_format:	
 	black src/*.py 
