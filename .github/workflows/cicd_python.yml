@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: 3.12
     - name: install
-      run: make -C JahnaviM-PythonToRust/analyze python_install
+      run: make python_install
     - name: lint
       run: make python_lint
     - name: test
