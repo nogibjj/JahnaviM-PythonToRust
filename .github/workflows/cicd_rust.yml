@@ -22,16 +22,16 @@ jobs:
     
     - name: install packages
       run: make install
-      working-directory: analyze
+      working-directory: src
 
     - name: lint
       run: make lint
-      working-directory: analyze
+      working-directory: src
 
     - name: test
       run: make test
-      working-directory: analyze
+      working-directory: src
 
     - name: format
       run: make format
-      working-directory: analyze
+      working-directory: src
