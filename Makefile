@@ -34,7 +34,7 @@ python_test:
 	python -m pytest -vv --cov=src src/test_*.py
 
 python_format:	
-	black *.py 
+	black src/*.py 
 
 python_lint:
 	ruff check src/*.py src/test_*.py
