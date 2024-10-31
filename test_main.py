@@ -1,4 +1,4 @@
-from analyze.src.main import calculate_mean
+from src.main import calculate_mean
 
 def test_calculate_mean():
     mean = calculate_mean()
