@@ -31,7 +31,7 @@ python_install:
 		pip install -r requirements.txt
 
 python_test:
-	python -m pytest -vv --cov=analyze/src test_*.py
+	python -m pytest -vv --cov=src test_*.py
 
 python_format:	
 	black *.py 

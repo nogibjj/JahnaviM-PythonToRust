@@ -1,0 +1,11 @@
+black
+pytest
+pytest-cov
+pylint
+
+numpy
+matplotlib
+
+polars
+datetime
+resource
