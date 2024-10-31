@@ -16,8 +16,8 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: 3.12
-    - name: install packages
-      run: make python_install
+    - name: install
+      run: make -C JahnaviM-PythonToRust/analyze/ python_install
     - name: lint
       run: make python_lint
     - name: test
