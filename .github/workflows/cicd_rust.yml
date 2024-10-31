@@ -21,17 +21,17 @@ jobs:
         override: true
     
     - name: install
-      run: make install
+      run: make rs_install
       working-directory: src
 
     - name: lint
-      run: make lint
+      run: make rs_lint
       working-directory: src
 
     - name: test
-      run: make test
+      run: make rs_test
       working-directory: src
 
     - name: format
-      run: make format
+      run: make rs_format
       working-directory: src

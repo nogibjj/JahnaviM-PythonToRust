@@ -9,32 +9,32 @@ rust-version:
 format:
 	cargo fmt --quiet
 
-install:
+rs_install:
 	cargo install --path .
 
-lint:
+rs_lint:
 	cargo clippy --quiet
 
-test:
+rs_test:
 	cargo test --quiet
 
-run:
+rs_run:
 	cargo run
 
-release:
+rs_release:
 	cargo build --release
 
-python_install:
+py_install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-python_test:
+py_test:
 	python -m pytest -vv --cov=src src/test_*.py
 
-python_format:	
+py_format:	
 	black src/*.py 
 
-python_lint:
+py_lint:
 	ruff check src/*.py src/test_*.py
 
-python_refactor: format lint
+py_refactor: format lint

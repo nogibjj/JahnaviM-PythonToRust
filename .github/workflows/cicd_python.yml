@@ -17,10 +17,10 @@ jobs:
       with:
         python-version: 3.12
     - name: install
-      run: make python_install
+      run: make py_install
     - name: lint
-      run: make python_lint
+      run: make py_lint
     - name: test
-      run: make python_test
+      run: make py_test
     - name: format
-      run: make python_format
+      run: make py_format
