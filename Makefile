@@ -6,7 +6,7 @@ rust-version:
 	rustup --version			#rust toolchain manager
 	clippy-driver --version		#rust linter
 
-format:
+rs_format:
 	cargo fmt --quiet
 
 rs_install:
