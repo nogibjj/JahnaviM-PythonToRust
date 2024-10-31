@@ -37,6 +37,6 @@ python_format:
 	black *.py 
 
 python_lint:
-	ruff check *.py mylib/*.py
+	ruff check *.py src/*.py
 
 python_refactor: format lint
