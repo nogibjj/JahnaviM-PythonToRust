@@ -20,7 +20,7 @@ jobs:
         toolchain: stable
         override: true
     
-    - name: install packages
+    - name: install
       run: make install
       working-directory: src
 

@@ -10,7 +10,7 @@ format:
 	cargo fmt --quiet
 
 install:
-	python_install
+	cargo install --path .
 
 lint:
 	cargo clippy --quiet
@@ -23,8 +23,6 @@ run:
 
 release:
 	cargo build --release
-
-all: format lint test run
 
 python_install:
 	pip install --upgrade pip &&\
